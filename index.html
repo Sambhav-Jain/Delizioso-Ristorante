@@ -110,12 +110,12 @@
                         <h2 class="text-white">Reserve a table</h2>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form id = "reservation-form" method="POST">
                             <div class="form-group row">
                               <label for="guests" class="col-sm-2 col-form-label">Number of Guests</label>
                               <div class="form-check col">
                                     <label class="radio-inline m-1">
-                                      <input type="radio" name="totalguests" value ="1"> 1 
+                                      <input type="radio" name="totalguests" value ="1" checked> 1 
                                     </label>
 
                                     <label class="radio-inline m-1">
@@ -145,15 +145,17 @@
                             </div>
                             <div class="form-group row">
                                 <label for="datetime" class="col-sm-2 col-form-label">Date and Time</label>
-                                <div class="col-sm-3">
-                                  <input type="date" placeholder="Date" class="form-control" id="datetime">
+                                <div class="col-sm-4">
+                                  <input type="date" placeholder="Date" class="form-control" name ="date" id="datetime">
                                 </div>
                                 <div class="col-sm-3">
-                                  <input type="time" placeholder="Time" class="form-control" id="datetime">
+                                  <input type="time" placeholder="Time" class="form-control" name="time" id="datetime">
                                 </div>
                               </div>
                           </form>
-                        <a href="#" class="offset-2 btn btn-primary">Reserve</a>
+                        <a href="#" class="offset-2 btn btn-primary" onclick="document.getElementById('reservation-form').submit();">
+                        Reserve
+                        </a>
                     </div>
                 </div>
             </div>

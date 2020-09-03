@@ -38,3 +38,8 @@ body {
 .navbar-dark {
     background-color: #512DA8;
 }
+.tab-content {
+    border: 1px solid #ddd;
+    border-top: 0;
+    padding: 20px;
+}
