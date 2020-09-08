@@ -27,31 +27,114 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+<!--                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>-->
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal" href="#" class="text-decoration-none">
+                        <span class="fa fa-sign-in"></span> Login </a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
-            <div class="row row-header justify-content-equally">
-                <div class="col-12 col-sm-6">
+            <div class="row row-header">
+                <div class="mb-3 offset-3 offset-sm-0 ol-12 col-sm align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="mb-2 col-12 col-sm-6">
                     <h1> Delizioso Ristorante</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!
                     </p>
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
-                </div>
-                <div class="col-12 col-sm align-self-center">
-                    <a href="#reserve" role="button" class="btn btn-warning btn-lg btn-block">Reserve Table</a>
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Click here <br><strong>To book your table in advanced</strong>" data-placement="bottom" href="#reserve">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
 
     <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide bg-secondary" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block  offset-2 offset-sm-0 img-fluid" src="img/uthappizza.png" alt="Uthappizza">
+                            <div class="carousel-caption offset-2 align-items-center d-none d-md-block">
+                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
+                                <p class="text-white col-10 text-justify">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Chilli Paneer.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block offset-2 offset-sm-0 mg-fluid" src="img/buffet.png" alt="Buffet">
+                            <div class="carousel-caption offset-2 d-none d-md-block">
+                                <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                                <p class="text-white col-10 text-justify">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/chef.jpg" alt="Alberto Somayya">
+                            <div class="carousel-caption offset-4 d-none d-md-block">
+                                <h2 class="mt-0">Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p class="text-white col-10 text-justify"> Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3 class="text-centre">Our Lipsmacking Culinary</h3>
@@ -61,16 +144,12 @@
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
                     <div class="media-body">
                         <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                            Italian pizza, topped with Cerignola olives, ripe vine
-                            cherry tomatoes, Vidalia onion, Guntur chillies and Chilli Paneer.</p>
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Chilli Paneer.</p>
                     </div>
                 </div>
 
             </div>
         </div>
-
-
         <div class="row row-content align-items-center bg-secondary">
             <div class="col-12 col-sm-4 col-md-3 bg-warning">
                 <h3>This Month's Promotions</h3>
@@ -105,15 +184,15 @@
         </div>
         <div class="row row-content align-items-center" id="reserve">
             <div class="col offset-sm-2 col-sm-8">
-                <div class="card">
+                <div class="card shadow-lg">
                     <div class="card-header bg-warning">
-                        <h2 class="text-white">Reserve a table</h2>
+                        <h2 class="text-center text-sm-left text-white">Reserve a table</h2>
                     </div>
                     <div class="card-body">
                         <form id="reservation-form" method="POST">
                             <div class="form-group row">
                                 <label for="guests" class="col-sm-2 col-form-label">Number of Guests</label>
-                                <div class="form-check col">
+                                <div class="form-check col offset-2 offset-sm-0">
                                     <label class="radio-inline m-1">
                                         <input type="radio" name="totalguests" value="1" checked> 1
                                     </label>
@@ -144,18 +223,27 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label for="section" class="col-sm-2 col-form-label">Section</label>
+                                  <div class="btn-group btn-group-toggle offset-3 offset-sm-0 ml-sm-3" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                      <input type="checkbox" checked name = "section" value="Non Smoking" autocomplete="off"> Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                      <input  type="checkbox" checked name = "section" value="Smoking" autocomplete="off"> Smoking
+                                    </label>
+                                    </div>
+                            </div>
+                            <div class="form-group row">
                                 <label for="datetime" class="col-sm-2 col-form-label">Date and Time</label>
-                                <div class="col-sm-4">
-                                    <input type="date" placeholder="Date" class="form-control" name="date" id="datetime">
+                                <div class="offset-3 offset-sm-0 col-6 col-sm-4 mb-2">
+                                    <input type="date" placeholder="Date" class="form-control" name="date" id="datetime" data-toggle="tooltip" data-html="true" title="Select a date" data-placement="bottom">
                                 </div>
-                                <div class="col-sm-3">
-                                    <input type="time" placeholder="Time" class="form-control" name="time" id="datetime">
+                                <div class="offset-3 offset-sm-0 col-6 col-sm-4 mb-2">
+                                    <input type="time" placeholder="Time" class="form-control" name="time" id="datetime" data-toggle="tooltip" data-html="true" title="Choose your timing slot" data-placement="bottom">
                                 </div>
                             </div>
+                            <div class ="form-row"><button type="submit" class="btn btn-primary btn-sm offset-5 font-weight-bold p-2">Reserve</button></div>
                         </form>
-                        <a href="#" class="offset-2 btn btn-primary" onclick="document.getElementById('reservation-form').submit();">
-                            Reserve
-                        </a>
                     </div>
                 </div>
             </div>
@@ -170,7 +258,7 @@
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
+<!--                        <li><a href="#">Menu</a></li>-->
                         <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
@@ -186,7 +274,7 @@
                         <a href="mailto:confusion@food.net">delizioso@food.net</a>
                     </address>
                 </div>
-                <div class="col-12 col-sm-4 align-self-center">
+                <div class="col-12 col-sm-4 align-self-center mb-3">
                     <div class="text-center">
                         <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
                         <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
@@ -198,8 +286,8 @@
                 </div>
             </div>
             <div class="row bg-dark justify-content-center text-white">
-                <div class="col-auto">
-                    <p>© Copyright 2018 Delizioso Ristorante</p>
+                <div class="col-auto pt-3">
+                    <p>© Copyright 2020 Delizioso Ristorante</p>
                 </div>
             </div>
         </div>
@@ -209,7 +297,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        $('.carousel').carousel({
+            interval: 2500
+        })
 
+    </script>
 </body>
 
 </html>
